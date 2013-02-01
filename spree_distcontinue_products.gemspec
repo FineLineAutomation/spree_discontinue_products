@@ -3,13 +3,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_distcontinue_products'
   s.version     = '1.3.1'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'A spree extension that adds is sold and discontinue options to products.'
+  s.description = 'A spree extension that adds is sold and discontinue options to products. Allows a user to specify whether a product should be sold and whether a product should be discontinued.'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  # s.author    = 'Nathan Lowrie'
+  # s.email     = 'nate@finelineautomation.com'
+  # s.homepage  = 'http://www.finelineautomation.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
