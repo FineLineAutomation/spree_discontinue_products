@@ -1,7 +1,7 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_distcontinue_products'
+  s.name        = 'spree_discontinue_products'
   s.version     = '1.3.1'
   s.summary     = 'A spree extension that adds is sold and discontinue options to products.'
   s.description = 'A spree extension that adds is sold and discontinue options to products. Allows a user to specify whether a product should be sold and whether a product should be discontinued.'
@@ -16,7 +16,8 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 1.3.1'
+  s.add_dependency 'spree_core', '~> 1.2.0'
+
 
   s.add_development_dependency 'capybara', '~> 1.1.2'
   s.add_development_dependency 'coffee-rails'
