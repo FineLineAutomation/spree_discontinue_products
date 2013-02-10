@@ -1,0 +1,15 @@
+<h2><%= t(:discontinued_admin_header) %></h2>
+
+<%= f.field_container :is_sold do %>
+  <%= f.check_box :is_sold  %> <%= f.label :is_sold, t(:is_sold) %><br />
+<% end %>
+
+<%= f.field_container :discontinue_on do %>
+  <%= f.label :discontinue_on, t(:discontinue_on) %><br />
+  <% if @product.discontinue_on? %>
+    <% discontinue_on = l(@product.discontinue_on, :format => t('spree.date_picker.format')) %>
+  <% else %>
+    <% discontinue_on = nil %>
+  <% end %>
+  <%= f.text_field :discontinue_on, :value => discontinue_on, :class => 'datepicker' %>
+<% end %>
