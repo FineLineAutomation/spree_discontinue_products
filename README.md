@@ -37,7 +37,7 @@ If you are installing this on an actual production store, we recommend that you 
     b. To use a specific branch specified in the Versionfile for your version of Spree:
 
     ```ruby
-    gem 'spree_active_shipping', :git => "git://github.com/FineLineAutomation/spree_discontinue_products", :branch => '1-3-stable'
+    gem 'spree_discontinue_products', :git => "git://github.com/FineLineAutomation/spree_discontinue_products", :branch => '1-3-stable'
     ```
 
 2. Run bundler:
