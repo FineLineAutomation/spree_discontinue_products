@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.description = 'A spree extension that adds is sold and discontinue options to products. Allows a user to specify whether a product should be sold and whether a product should be discontinued.'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author    = 'Nathan Lowrie'
-  # s.email     = 'nate@finelineautomation.com'
-  # s.homepage  = 'http://www.finelineautomation.com'
+  s.author    = 'Nathan Lowrie'
+  s.email     = 'nate@finelineautomation.com'
+  s.homepage  = 'http://www.finelineautomation.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
