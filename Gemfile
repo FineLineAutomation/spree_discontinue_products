@@ -13,7 +13,7 @@ group :development do
 	gem 'guard-cucumber'
 end
 
-gem 'spree', :git => "git://github.com/spree/spree.git", :branch => "1-2-stable"
-gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-2-stable'
+gem 'spree', :git => "git://github.com/spree/spree.git", :branch => "1-3-stable"
+gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
 
 gemspec
