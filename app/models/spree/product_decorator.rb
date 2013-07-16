@@ -17,9 +17,9 @@ Spree::Product.class_eval do
   end
 
   # Can't use add_search_scope for this as it needs a default argument
-  def self.available(available_on = nil)
+  def self.available(available_on = nil, currency = nil)
     variants_table = Spree::Variant.table_name
-    available_scope = where("#{Spree::Product.quoted_table_name}.available_on <= ?", available_on || Time.now)
+    available_scope = joins(:master => :prices).where("#{Spree::Product.quoted_table_name}.available_on <= ?", available_on || Time.now)
     available_scope = available_scope.where(:is_sold => true)
     available_scope.where("#{Spree::Product.quoted_table_name}.discontinue_on is null
                           OR #{Spree::Product.quoted_table_name}.discontinue_on > ?
@@ -33,6 +33,10 @@ Spree::Product.class_eval do
                               having sum(count_on_hand) > 0
                             )
                           )", available_on || Time.now, available_on || Time.now)
+    unless Spree::Config.show_products_without_price
+        available_scope = available_scope.where('spree_prices.currency' => currency || Spree::Config[:currency]).where('spree_prices.amount IS NOT NULL')
+    end
+    available_scope
   end
   search_scopes << :available
 
